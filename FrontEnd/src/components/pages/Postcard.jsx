@@ -14,7 +14,7 @@ const PostCard = ({ post, currentUser, onUpdate }) => {
     setIsLiking(true);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/posts/${post._id}/like`, {
+      const response = await fetch(`https://threew-assignment-vt12.onrender.com/api/posts/${post._id}/like`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const PostCard = ({ post, currentUser, onUpdate }) => {
     setIsCommenting(true);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/posts/${post._id}/comment`, {
+      const response = await fetch(`https://threew-assignment-vt12.onrender.com/api/posts/${post._id}/comment`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

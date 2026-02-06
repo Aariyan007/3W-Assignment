@@ -22,7 +22,7 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/posts');
+      const response = await fetch('https://threew-assignment-vt12.onrender.com/api/posts');
       const data = await response.json();
       setPosts(data);
     } catch (error) {
