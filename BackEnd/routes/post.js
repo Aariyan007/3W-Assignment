@@ -36,10 +36,10 @@ router.post("/:id/like", async (req, res) => {
     const likeIndex = post.likes.indexOf(username);
 
     if (likeIndex > -1) {
-      // User already liked, so unlike
+      // unlike
       post.likes.splice(likeIndex, 1);
     } else {
-      // User hasn't liked, so like
+      // Use like
       post.likes.push(username);
     }
 

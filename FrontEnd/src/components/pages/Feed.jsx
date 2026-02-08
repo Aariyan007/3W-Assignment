@@ -45,6 +45,19 @@ const Feed = () => {
 
   return (
     <div className="feed-container">
+      {/* Animated Background */}
+      <div className="feed-background">
+        <div className="bg-shape bg-shape-1"></div>
+        <div className="bg-shape bg-shape-2"></div>
+        <div className="bg-shape bg-shape-3"></div>
+        <div className="bg-shape bg-shape-4"></div>
+        <div className="bg-particle"></div>
+        <div className="bg-particle"></div>
+        <div className="bg-particle"></div>
+        <div className="bg-particle"></div>
+        <div className="bg-particle"></div>
+      </div>
+
       {/* Header */}
       <div className="feed-header">
         <div className="header-content">
@@ -56,7 +69,7 @@ const Feed = () => {
             </svg>
             <h1>Feed</h1>
           </div>
-          <button className="logout-btn" onClick={handleLogout}>
+          <button className="logout-btn" onClick={handleLogout} aria-label="Logout">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M16 17L21 12L16 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -98,6 +111,7 @@ const Feed = () => {
       <button 
         className="create-post-fab"
         onClick={() => navigate('/create-post')}
+        aria-label="Create new post"
       >
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -107,4 +121,4 @@ const Feed = () => {
   );
 };
 
-export default Feed; 
+export default Feed;
